@@ -29,5 +29,10 @@ spec:
             port: 80
           initialDelaySeconds: 15
           periodSeconds: 3
-      nodeSelector:
-        storageType: ssd
+        resources:
+          requests:
+            cpu: 200m
+            memory: 100Mi
+          limits:
+            cpu: 300m
+            memory: 200Mi
